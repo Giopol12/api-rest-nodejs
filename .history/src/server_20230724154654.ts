@@ -5,10 +5,12 @@ import { randomUUID } from 'crypto'
 const app = fastify()
 
 app.get('/hello', async (req, res) => {
-  const transactions = await knex('transactions')
-    .where('amount', 100)
-    .select('*')
-  return transactions
+  const transaction = knex('transactions').insert({
+    id: randomUUID(),
+    title: 'Transaction Teste',
+    amount: 1000,
+  }).returning(*)
+  return transaction
 })
 
 app.listen({ port: 3333 }).then(() => {

@@ -1,4 +1,4 @@
-import { Knex, knex as setupKnex } from 'knex'
+import { knex as knexSetup, Knex } from 'knex'
 
 export const config: Knex.Config = {
   client: 'sqlite',
