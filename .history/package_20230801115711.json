@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": ">= 18"
-  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "test": "vitest",
@@ -33,6 +30,7 @@
     "fastify": "^4.20.0",
     "knex": "^2.5.1",
     "pg": "^8.11.2",
+    
     "zod": "^3.21.4"
   }
 }
